@@ -1,5 +1,4 @@
 import * as styles from '../styles/notification.module.css';
-console.log('styles', styles);
 
 export function renderTodos(todos) {
   const renderedItemArray = todos.map(function (todo) {
