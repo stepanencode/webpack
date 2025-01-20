@@ -1,6 +1,9 @@
 /* purgecss ignore*/
 
 .notification {
+  background-color: #d4edda;
+  color: #155724;
+  height: 50px;
   width: 100%;
   position: fixed;
   display: flex;

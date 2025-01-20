@@ -33,15 +33,8 @@ export function getTodoId(element) {
 }
 
 function showNotification() {
-  const notificationElement = document.createElement('div');
-  notificationElement.classList.add(
-    'alert',
-    'alert-success',
-    styles.notification
-  );
-  notificationElement.setAttribute('role', 'alert');
-  notificationElement.innerHTML = 'Todo item added';
-  document.body.appendChild(notificationElement);
+  const notification = `<div class="${styles.notification}">Todo item added</div>`;
+  document.body.innerHTML += notification;
   setTimeout(function () {
     const notificationElement = document.querySelector(
       `.${styles.notification}`
