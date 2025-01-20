@@ -1,3 +1,4 @@
+import '../styles/vendors.scss';
 import '../styles/index.scss';
 
 import {
