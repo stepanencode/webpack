@@ -47,6 +47,10 @@ module.exports = merge(common, {
           },
         ],
       },
+      {
+        test: /\.less$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
+      },
     ],
   },
   plugins: [
