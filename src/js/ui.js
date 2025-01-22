@@ -1,4 +1,22 @@
+import jss from 'jss';
+import preset from 'jss-preset-default';
 import * as styles from '../styles/notification.module.css';
+
+jss.setup(preset());
+
+const checkboxSize = '30px';
+const jssStyles = {
+  realCheckbox: {
+    width: checkboxSize,
+    height: checkboxSize,
+    cursor: 'pointer',
+    opacity: 0,
+    position: 'absolute',
+    top: '-3px',
+    left: '-5px',
+  },
+};
+const { classes } = jss.createStyleSheet(jssStyles).attach();
 
 export function renderTodos(todos) {
   const renderedItemArray = todos.map(function (todo) {
@@ -7,8 +25,8 @@ export function renderTodos(todos) {
     return `
             <li data-id="${todo.id}" class="${className}">
                 <span class="custom-checkbox">
-                    <img class="check" src="./images/checkmark.svg" width="22" height="22"></img>
-                    <input class="real-checkbox" type="checkbox" ${completionClass} />
+                    <img class="check" src="../images/checkmark.svg" width="22" height="22"></img>
+                    <input class="${classes.realCheckbox}" data-element="real-checkbox" type="checkbox" ${completionClass} />
                 </span>
                 <label>${todo.text}</label>
                 <span class="delete"></span>

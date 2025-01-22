@@ -17,7 +17,7 @@ document.addEventListener('click', function (event) {
   if (event.target.classList.contains('delete')) {
     removeTodoEventHandler(event);
   }
-  if (event.target.classList.contains('real-checkbox')) {
+  if (event.target.dataset.element === 'real-checkbox') {
     toggleTodoEventListener(event);
   }
 });
