@@ -100,3 +100,20 @@ h1 {
     }
   }
 }
+
+.motivational-pictures-container {
+  display: flex;
+  justify-content: center;
+
+  .motivational-pictures {
+    display: flex;
+    gap: 50px;
+    margin: 200px auto;
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 8px;
+    }
+  }
+}
